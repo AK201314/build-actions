@@ -50,8 +50,7 @@ EOF
 #sed -i 's/"Argon 主题设置"/"Argon设置"/g' `grep "Argon 主题设置" -rl ./`
 
 
-git clone https://github.com/wiwizcom/WiFiPortal.git package
-
+git clone https://github.com/wiwizcom/WiFiPortal.git package/wifidog-wiwiz
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
