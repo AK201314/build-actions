@@ -50,9 +50,8 @@ EOF
 #sed -i 's/"Argon 主题设置"/"Argon设置"/g' `grep "Argon 主题设置" -rl ./`
 
 
-git clone https://github.com/wiwizcom/WiFiPortal.git package/wifidog-wiwiz
-./scripts/feeds update -a
-./scripts/feeds install -a
+cd ..
+git clone https://github.com/wiwizcom/WiFiPortal.git
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.50.1/g' package/base-files/files/bin/config_generate
