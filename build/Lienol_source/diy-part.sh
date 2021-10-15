@@ -49,7 +49,6 @@ EOF
 #sed -i 's/"带宽监控"/"监控"/g' `grep "带宽监控" -rl ./`
 #sed -i 's/"Argon 主题设置"/"Argon设置"/g' `grep "Argon 主题设置" -rl ./`
 
-
 cd ..
 git clone https://github.com/wiwizcom/WiFiPortal.git
 
