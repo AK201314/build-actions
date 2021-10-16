@@ -52,6 +52,10 @@ EOF
 git clone https://github.com/wiwizcom/WiFiPortal.git
 cp -r WiFiPortal/eqos-master-wiwiz openwrt/package/
 cp -r WiFiPortal/wifidog-wiwiz openwrt/package/
+cd openwrt
+./scripts/feeds update -a
+./scripts/feeds install -a
+
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.50.1/g' package/base-files/files/bin/config_generate
