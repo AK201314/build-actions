@@ -49,12 +49,12 @@ EOF
 #sed -i 's/"带宽监控"/"监控"/g' `grep "带宽监控" -rl ./`
 #sed -i 's/"Argon 主题设置"/"Argon设置"/g' `grep "Argon 主题设置" -rl ./`
 
-git clone https://github.com/wiwizcom/WiFiPortal.git
-cp -r WiFiPortal/eqos-master-wiwiz openwrt/package/
-cp -r WiFiPortal/wifidog-wiwiz openwrt/package/
-cd openwrt
-./scripts/feeds update -a
-./scripts/feeds install -a
+git clone https://github.com/wiwizcom/WiFiPortal.git package/lean/wifidog-wiwiz
+#cp -r WiFiPortal/eqos-master-wiwiz openwrt/package/
+#cp -r WiFiPortal/wifidog-wiwiz openwrt/package/
+#cd openwrt
+#./scripts/feeds update -a
+#./scripts/feeds install -a
 
 
 # Modify default IP
