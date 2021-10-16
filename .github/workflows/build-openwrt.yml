@@ -112,9 +112,6 @@ jobs:
       working-directory: /${{matrix.target}}
       run: |
         git clone -b "$REPO_BRANCH" --single-branch "$REPO_URL" openwrt
-        git clone https://github.com/wiwizcom/WiFiPortal.git
-        cp -r WiFiPortal/eqos-master-wiwiz openwrt/package/
-        cp -r WiFiPortal/wifidog-wiwiz openwrt/package/
         cd openwrt
         ./scripts/feeds update -a > /dev/null 2>&1
         ln -sf /${{matrix.target}}/openwrt $GITHUB_WORKSPACE/openwrt
