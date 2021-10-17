@@ -49,6 +49,10 @@ EOF
 #sed -i 's/"带宽监控"/"监控"/g' `grep "带宽监控" -rl ./`
 #sed -i 's/"Argon 主题设置"/"Argon设置"/g' `grep "Argon 主题设置" -rl ./`
 
+git clone https://github.com/wiwizcom/WiFiPortal.git
+cp -r WiFiPortal/eqos-master-wiwiz package/
+cp -r WiFiPortal/wifidog-wiwiz package/
+
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.50.1/g' package/base-files/files/bin/config_generate
 
